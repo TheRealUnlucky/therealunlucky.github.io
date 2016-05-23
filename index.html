@@ -1,8 +1,21 @@
 <!DOCTYPE html>
-<html>
-    <head></head>
-    <body>
-        <h1>Test</h1>
-        <body>testpage</body>
+<html ng-app="app">
+    <head>
+        <base href="/">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.min.js"></script>
+        
+        <script src="js/lib/angular-markdown/showdown.js"></script>
+        <script src="js/lib/angular-markdown/markdown.js"></script>
+        
+        <script src="js/default.js"></script>
+    </head>
+    
+    <body ng-controller="testCtrl">
+        <p>Hello?</p>
+        <textarea ng-model="inputHTML"></textarea><br/>
+        <div btf-markdown="inputHTML"></div>
+        <pre>{{inputHTML}}</pre>
     </body>
 </html>
