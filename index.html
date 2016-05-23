@@ -3,28 +3,19 @@
     <head>
         <base href="/">
         
-        <link rel="stylesheet" type="text/css" href="css/global.css">
-        
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
         
         <script src="js/lib/angular-markdown/showdown.js"></script>
         <script src="js/lib/angular-markdown/markdown.js"></script>
-        <script src="js/lib/angular-ui/angular-ui-router.min.js"></script>
         
-        <script src="js/app.js"></script>
+        <script src="js/default.js"></script>
     </head>
     
-    <body>
-        <div id="navbar">
-            <ul>
-                <li><a href="">Test</a></li>
-            </ul>
-        </div>
-        
-        <h1>Pat's a Little Bitch</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nibh, venenatis sed consequat eu, tincidunt sit amet velit. Nulla facilisi. Fusce ante lectus, maximus quis fringilla a, aliquam quis ex. Suspendisse sollicitudin finibus orci, in tincidunt lectus. Nam feugiat aliquam leo, et faucibus mauris efficitur eu. Quisque condimentum quam tincidunt tincidunt aliquam. Praesent pellentesque malesuada sem non placerat. Nullam odio libero, luctus at odio in, lobortis auctor tortor.</p>
-        <p>Proin ac condimentum sem. Ut non porta justo. Nunc luctus magna a sollicitudin laoreet. Proin rutrum, mi at interdum pretium, sem dui cursus nulla, sit amet vestibulum velit ipsum ac elit. Quisque tempor mattis ullamcorper. Etiam hendrerit, metus quis elementum dictum, turpis eros imperdiet nunc, eget fermentum est felis vel justo. Maecenas nec magna feugiat, porttitor enim quis, semper mi. Vivamus et lobortis arcu. Sed congue blandit felis, at iaculis ipsum egestas id. Sed tempor leo at nibh ornare semper. In non pretium ligula.</p>
+    <body ng-controller="testCtrl">
+        <p>Hello?</p>
+        <textarea ng-model="inputHTML"></textarea><br/>
+        <div btf-markdown="inputHTML"></div>
+        <pre>{{inputHTML}}</pre>
     </body>
 </html>
