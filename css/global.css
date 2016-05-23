@@ -1,9 +1,26 @@
 body {
     color: #F0F0F0;
     background-color: #1A1A1A;
+    font-family: 'Open Sans', sans-serif;
     
+    /*
     margin: 0;
     padding: 0;
+    */
+}
+
+.something {
+    background-color: 
+}
+
+.spec {
+    width: 350px;
+    
+    color: #1A1A1A;
+    font-weight: 800;
+    
+    padding: 8px;
+    margin: 5px;
 }
 
 #navbar {
