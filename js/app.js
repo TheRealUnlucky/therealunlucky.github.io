@@ -13,7 +13,7 @@ firebase.initializeApp(fbConfig);
 
 // Declare the main application module
 // ngSanitize = The module to handle Sanitizing the 
-var app = angular.module('app', ['ngSanitize', 'btford.markdown']);
+var app = angular.module('app', ['ngSanitize', 'ngRoute', 'btford.markdown']);
 
 app.factory('Auth', function() {
     return firebase.auth();
@@ -26,7 +26,7 @@ app.run(function($rootScope, $location, $window, Auth) {
     
     $rootScope.isLoggedIn = function() {
         
-        if (Auth) {
+        if (Auth.currentUser) {
             return true;
         } else {
             return false;
@@ -34,6 +34,8 @@ app.run(function($rootScope, $location, $window, Auth) {
     }
 });
 
-app.controller('testCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     
+    $routeProvider.otherwise({redirectTo: '/'});
+    $locationProvider.html5Mode(false);
 }]);

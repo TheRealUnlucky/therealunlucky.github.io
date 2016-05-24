@@ -3,14 +3,12 @@ body {
     background-color: #1A1A1A;
     font-family: 'Open Sans', sans-serif;
     
-    /*
     margin: 0;
-    padding: 0;
-    */
 }
 
-.something {
-    background-color: 
+.center {
+    width: 70%;
+    margin: 0 auto;
 }
 
 .spec {
@@ -23,11 +21,21 @@ body {
     margin: 5px;
 }
 
-#navbar {
-    overflow: auto;
+.postPreviewBlock {
+    width: 33.3%;
+    height: 300px;
+    
+    display: inline-block;
+    float: left;
 }
 
-#navbar ul {
+#banner {
+    padding: 8px;
+    height: 250px;
+}
+
+#navbar {
+    overflow: auto;
     list-style-type: none;
     
     padding: 0;
@@ -45,4 +53,8 @@ body {
     color: #F0F0F0;
     
     padding: 14px 16px;
+}
+
+#navbar a:hover {
+    color: darkkhaki;
 }
